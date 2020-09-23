@@ -44,6 +44,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 $deepblue: #2D4059 !default;
+$white-fa: #fafafa !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -96,7 +97,7 @@ $theme-color-interval:      8% !default;
 $yiq-contrasted-threshold:  152 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark:             $gray-900 !default;
+$yiq-text-dark:             $deepblue !default;
 $yiq-text-light:            $white !default;
 
 // Characters which are escaped by the escape-svg function
@@ -166,8 +167,8 @@ $sizes: map-merge(
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-bg:                   $white-fa !default;
+$body-color:                $deepblue !default;
 
 
 // Links

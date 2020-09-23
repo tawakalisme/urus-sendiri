@@ -1,6 +1,11 @@
 <template>
   <div>
-    <b-navbar fixed="top" :sticky="currentPath !== '/'" toggleable="lg">
+    <b-navbar
+      fixed="top"
+      :sticky="currentPath !== '/'"
+      toggleable="lg"
+      :class="scrollPosition > 768 ? 'bg-light' : 'yellow-nav'"
+    >
       <b-container>
         <b-navbar-brand href="#"><span>urus</span>sendiri</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse">
@@ -27,13 +32,24 @@
 <script>
 export default {
   name: "Navbar",
-  methods: {},
+  data() {
+    return { scrollPosition: null };
+  },
+  methods: {
+    scrolled() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
   computed: {
     currentPath() {
       return this.$route.path;
     },
   },
+  mounted() {
+    window.addEventListener("scroll", this.scrolled);
+  },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
