@@ -17,6 +17,7 @@ h2 {
   font-family: "Bitter", serif;
 }
 
+// Hero Section
 .navbar {
   &.yellow-nav {
     background-color: $yellow;
@@ -109,5 +110,68 @@ h2 {
 
   100% {
     transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+// Layanan Section
+
+.layanan {
+  
+}
+
+.card-service {
+  box-shadow: 0px 4px 16px rgba(38, 50, 56, 0.16);
+  border-radius: 24px;
+  transition: box-shadow 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: box-shadow 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  img {
+    margin: 32px 0;
+  }
+  p {
+    font-size: 0.875rem;
+    margin: 0 16px;
+    padding: 0 16px;
+  }
+  .btn {
+    border-radius: 16px;
+    padding: 16px;
+    border: none;
+    margin: 32px 0;
+  }
+  .btn-a {
+    filter: drop-shadow(0px 4px 16px rgba(#26c6da, 0.24));
+    background: rgba(#26c6da, 0.8);
+    &:hover {
+      background: #26c6da;
+    }
+  }
+  .btn-b {
+    filter: drop-shadow(0px 4px 16px rgba(#be63f9, 0.24));
+    background: rgba(#be63f9, 0.8);
+    &:hover {
+      background: #be63f9;
+    }
+  }
+  .btn-c {
+    filter: drop-shadow(0px 4px 16px rgba(#f07b3f, 0.24));
+    background: rgba(#f07b3f, 0.8);
+    &:hover {
+      background: #f07b3f;
+    }
+  }
+}
+.card-ktp {
+  &:hover {
+    box-shadow: 0px 4px 16px rgba(#26c6da, 0.32);
+  }
+}
+.card-kk {
+  &:hover {
+    box-shadow: 0px 4px 16px rgba(#be63f9, 0.32);
+  }
+}
+.card-akta {
+  &:hover {
+    box-shadow: 0px 4px 16px rgba(#f07b3f, 0.32);
   }
 }
