@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="hero">
-      <div class="waves"></div>
+      <div class="waves" data-aos="fade-down"></div>
       <div class="container">
         <b-row class="align-items-center">
-          <b-col>
+          <b-col data-aos="fade-right" data-aos-delay="300">
             <h1>
               Urus
               <VueTyper
@@ -26,9 +26,14 @@
               Mulai urus dokumen kependudukan Anda hanya dengan beberapa klik
               saja!
             </p>
-            <b-button variant="primary">Mulai Sekarang</b-button>
+            <b-button
+              variant="primary"
+              size="lg"
+              v-scroll-to="{ el: '#list-layanan', offset: -100 }"
+              >Mulai Sekarang</b-button
+            >
           </b-col>
-          <b-col class="d-none d-md-block">
+          <b-col class="d-none d-md-block" data-aos="fade-left" data-aos-delay="500">
             <img src="@/assets/Getting Coffee-pana.svg" alt="" />
           </b-col>
         </b-row>
@@ -60,4 +65,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+button {
+  text-transform: uppercase;
+}
+</style>

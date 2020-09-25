@@ -1,7 +1,7 @@
 <template>
-  <b-container class="layanan">
+  <b-container class="layanan" id="list-layanan">
     <b-row>
-      <b-col>
+      <b-col data-aos="fade-up" >
         <h2 class="text-center">Mulai Buat Dokumen Anda dengan Mudah</h2>
         <p class="text-center mb-5 px-5">
           Kami melayani kebutuhan dokumen kependudukan Anda sepanjang hari dan
@@ -13,7 +13,7 @@
     </b-row>
     <b-row class="text-center">
       <b-col class="mb-4" lg="4">
-        <div class="card-service card-ktp">
+        <div class="card-service card-ktp" data-aos="fade-up" data-aos-delay="300">
           <img src="@/assets/ktp.svg" alt="ktp" />
           <h4>Kartu Tanda Penduduk</h4>
           <p>Perekaman data baru, cetak kartu, perbaikan data dan kartu</p>
@@ -23,7 +23,7 @@
         </div>
       </b-col>
       <b-col class="mb-4" lg="4">
-        <div class="card-service card-kk">
+        <div class="card-service card-kk" data-aos="fade-up"  data-aos-delay="500">
           <img src="@/assets/kk.svg" alt="ktp" />
           <h4>Kartu Keluarga</h4>
           <p>
@@ -35,7 +35,7 @@
         </div></b-col
       >
       <b-col class="mb-4" lg="4">
-        <div class="card-service card-akta">
+        <div class="card-service card-akta" data-aos="fade-up"  data-aos-delay="700">
           <img src="@/assets/akta.svg" alt="ktp" />
           <h4>Pencatatan Sipil</h4>
           <p>Akta kelahiran, akta kematian, dan perbaikan data</p>
