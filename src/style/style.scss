@@ -3,13 +3,17 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@600&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+// body {
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
+//   // scroll-behavior: smooth;
+// }
+// body::-webkit-scrollbar {
+//   display: none; //hide for safari and chrome
+// }
+
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    display: none; //hide for safari and chrome
-  }
+  overflow-x: hidden;
 }
 
 h1,
@@ -53,8 +57,8 @@ h2 {
 .hero {
   height: 100vh;
   width: 100vw;
-  display: flex;
   background: $orange;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
@@ -113,6 +117,7 @@ h2 {
 }
 
 // Layanan Section
+
 .card-service {
   box-shadow: 0px 4px 16px rgba(38, 50, 56, 0.16);
   border-radius: 24px;
@@ -120,6 +125,7 @@ h2 {
   padding: 24px;
   min-height: 400px;
   position: relative;
+  background-color: $white;
   img {
     margin: 32px 0;
   }
@@ -183,4 +189,26 @@ h2 {
   }
 }
 
-// Contact
+// Footer
+.footer {
+  background: $deepblue;
+  padding: 24px 0;
+  color: $white;
+  h3 {
+    span {
+      font-family: "Bitter", sans-serif;
+    }
+  }
+  p {
+    font-weight: 400;
+    a {
+      text-decoration: none;
+      color: $white;
+      font-weight: 600;
+      transition: letter-spacing .2s ease-in-out;
+      &:hover {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

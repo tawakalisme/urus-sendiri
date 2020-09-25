@@ -15,7 +15,7 @@
       <b-col class="mb-4" lg="4">
         <div class="card-service card-ktp" data-aos="fade-up" data-aos-delay="300">
           <img src="@/assets/ktp.svg" alt="ktp" />
-          <h4>Kartu Tanda Penduduk</h4>
+          <h3 class="h4">Kartu Tanda Penduduk</h3>
           <p>Perekaman data baru, cetak kartu, perbaikan data dan kartu</p>
           <div class="bottom-block">
             <b-button variant="blue">Buat Pengajuan</b-button>
@@ -25,7 +25,7 @@
       <b-col class="mb-4" lg="4">
         <div class="card-service card-kk" data-aos="fade-up"  data-aos-delay="500">
           <img src="@/assets/kk.svg" alt="ktp" />
-          <h4>Kartu Keluarga</h4>
+          <h3 class="h4">Kartu Keluarga</h3>
           <p>
             Cetak kartu baru, perbaikan data dan kartu, pelaporan pindah datang
           </p>
@@ -37,7 +37,7 @@
       <b-col class="mb-4" lg="4">
         <div class="card-service card-akta" data-aos="fade-up"  data-aos-delay="700">
           <img src="@/assets/akta.svg" alt="ktp" />
-          <h4>Pencatatan Sipil</h4>
+          <h3 class="h4">Pencatatan Sipil</h3>
           <p>Akta kelahiran, akta kematian, dan perbaikan data</p>
           <div class="bottom-block">
             <b-button variant="orange">Buat Pengajuan</b-button>
