@@ -6,10 +6,10 @@
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-}
-
-body::-webkit-scrollbar {
-  display: none; //hide for safari and chrome
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none; //hide for safari and chrome
+  }
 }
 
 h1,
@@ -76,31 +76,30 @@ h2 {
   left: 50vw;
   right: 0;
   height: 100vw;
-  background-color: var(--color);
+  background-color: $body-bg;
   transition: 500ms;
-}
 
-.waves::before,
-.waves::after {
-  content: "";
-  position: absolute;
-  width: 225vw;
-  height: 225vw;
-  top: 24vh;
-  left: 50%;
-  transform: translate(-50%, -75%);
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 225vw;
+    height: 225vw;
+    top: 24vh;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  &::before {
+    border-radius: 44%;
+    background: rgba($yellow, 1);
+    animation: waves 8s linear infinite;
+  }
 
-.waves::before {
-  border-radius: 44%;
-  background: rgba($yellow, 1);
-  animation: waves 8s linear infinite;
-}
-
-.waves::after {
-  border-radius: 44%;
-  background: rgba($yellow, 0.5);
-  animation: waves 15s linear infinite;
+  &::after {
+    border-radius: 44%;
+    background: rgba($yellow, 0.5);
+    animation: waves 15s linear infinite;
+  }
 }
 
 @keyframes waves {
@@ -114,16 +113,13 @@ h2 {
 }
 
 // Layanan Section
-
-.layanan {
-  
-}
-
 .card-service {
   box-shadow: 0px 4px 16px rgba(38, 50, 56, 0.16);
   border-radius: 24px;
   transition: box-shadow 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-  transition: box-shadow 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  padding: 24px;
+  min-height: 400px;
+  position: relative;
   img {
     margin: 32px 0;
   }
@@ -132,27 +128,38 @@ h2 {
     margin: 0 16px;
     padding: 0 16px;
   }
+  .bottom-block {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+  }
+
   .btn {
     border-radius: 16px;
     padding: 16px;
     border: none;
-    margin: 32px 0;
+    color: $white;
+    &:focus {
+      box-shadow: none;
+    }
   }
-  .btn-a {
+  .btn-blue {
     filter: drop-shadow(0px 4px 16px rgba(#26c6da, 0.24));
     background: rgba(#26c6da, 0.8);
     &:hover {
       background: #26c6da;
     }
   }
-  .btn-b {
+  .btn-purple {
     filter: drop-shadow(0px 4px 16px rgba(#be63f9, 0.24));
     background: rgba(#be63f9, 0.8);
     &:hover {
       background: #be63f9;
     }
   }
-  .btn-c {
+  .btn-orange {
     filter: drop-shadow(0px 4px 16px rgba(#f07b3f, 0.24));
     background: rgba(#f07b3f, 0.8);
     &:hover {
@@ -175,3 +182,5 @@ h2 {
     box-shadow: 0px 4px 16px rgba(#f07b3f, 0.32);
   }
 }
+
+// Contact
