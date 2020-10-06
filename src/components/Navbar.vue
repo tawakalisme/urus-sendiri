@@ -4,10 +4,12 @@
       fixed="top"
       :sticky="currentPath !== '/'"
       toggleable="lg"
-      :class="scrollPosition > 768 ? 'bg-light' : 'yellow-nav'"
+      :class="
+        scrollPosition > 768 || currentPath !== '/' ? 'white-nav' : 'yellow-nav'
+      "
     >
       <b-container>
-        <b-navbar-brand href="#"><span>urus</span>sendiri</b-navbar-brand>
+        <b-navbar-brand href="/"><span>urus</span>sendiri</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse">
           <template v-slot:default="{ expanded }">
             <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
@@ -20,8 +22,6 @@
             <b-nav-item to="/cek-status" :active="currentPath == '/cek-status'"
               >Cek Status</b-nav-item
             >
-            <b-nav-item href="#">Bantuan</b-nav-item>
-            <b-nav-item href="#">Tentang</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
@@ -51,5 +51,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
